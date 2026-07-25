@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs
+dist/
+build/
+.next/
+out/
+target/
+
+# Logs and databases
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment and Secrets (CRITICAL: Do not leak keys)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+agent/.env
+agent/keys/
+contract/keys/
+keys/
+*.pem
+
+# IDE / Editor config
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

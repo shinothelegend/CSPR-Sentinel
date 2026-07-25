@@ -1,0 +1,14 @@
+{
+  "name": "cspr-sentinel-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -c \"cyan,magenta\" \"npm run dev --prefix agent\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix shared && npm run build --prefix agent && npm run build --prefix frontend",
+    "build:contract": "cd contract && cargo build --target wasm32-unknown-unknown --release",
+    "deploy:contract": "npm --prefix contract deploy"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
