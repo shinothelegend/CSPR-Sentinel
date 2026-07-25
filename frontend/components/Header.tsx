@@ -57,12 +57,12 @@ export const Header: React.FC<HeaderProps> = ({ status, theme, onToggleTheme }) 
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-xl font-bold tracking-tight text-white">CSPR Sentinel</h1>
-              <span className="px-2 py-0.5 text-[10px] font-mono tracking-wider font-semibold uppercase bg-red-950/70 border border-red-500/30 text-red-400 rounded">
-                Casper Testnet
+              <span className="px-2 py-0.5 text-[10px] font-mono tracking-wider font-semibold uppercase bg-purple-950/70 border border-purple-500/30 text-purple-400 rounded">
+                Condor Testnet (Casper 2.0)
               </span>
             </div>
             <p className="text-xs text-slate-400 hidden sm:block">
-              Autonomous Agentic Microservice Discovery & x402 Micropayments
+              Autonomous Agentic Security Layer & Threat Monitoring on Casper Network
             </p>
           </div>
         </div>

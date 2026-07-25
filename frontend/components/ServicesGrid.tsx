@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { CONFIG, ServiceDefinition, PaymentReceipt } from '@cspr-sentinel/shared';
-import { CloudSun, TrendingUp, Cpu, Database, Play, CheckCircle2 } from 'lucide-react';
+import { ShieldAlert, TrendingUp, Cpu, Database, Play, CheckCircle2 } from 'lucide-react';
 
 interface ServicesGridProps {
   history: PaymentReceipt[];
@@ -12,8 +12,8 @@ interface ServicesGridProps {
 export const ServicesGrid: React.FC<ServicesGridProps> = ({ history, onTriggerService }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'CloudSun':
-        return <CloudSun className="w-5 h-5 text-amber-400" />;
+      case 'ShieldAlert':
+        return <ShieldAlert className="w-5 h-5 text-rose-400" />;
       case 'TrendingUp':
         return <TrendingUp className="w-5 h-5 text-emerald-400" />;
       case 'Cpu':
@@ -34,8 +34,8 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ history, onTriggerSe
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-base font-bold text-white">Discovered Paid Microservices</h3>
-          <p className="text-xs text-slate-400">gated behind x402 Payment Required challenge</p>
+          <h3 className="text-base font-bold text-white">Agentic Security & Threat Feeds</h3>
+          <p className="text-xs text-slate-400">gated behind x402 Payment Required challenge on Casper 2.0 (Condor)</p>
         </div>
       </div>
 

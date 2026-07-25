@@ -54,50 +54,50 @@ export class MockServiceServer {
 
   private generatePayload(serviceId: string): any {
     switch (serviceId) {
-      case 'weather-oracle':
+      case 'hash-verifier':
         return {
-          location: 'Casper Testnet Node Alpha',
-          temperatureCelsius: (18.5 + Math.random() * 4).toFixed(1),
-          humidityPct: Math.floor(45 + Math.random() * 20),
-          pressureHpa: 1013.25 + Math.floor(Math.random() * 10),
-          solarRadiationWm2: Math.floor(600 + Math.random() * 200),
-          uvIndex: 7.2,
-          status: 'OPTIMAL_SENSING',
+          validatorNode: 'Casper Validator Node Alpha',
+          blockHeight: 3128452 + Math.floor(Math.random() * 10),
+          blockStateRootHash: '5c0e271...20cba',
+          validationStatus: 'SUCCESS_INTEGRITY_VERIFIED',
+          merkleTreeDepth: 14,
+          checkedAt: Date.now(),
         };
 
-      case 'market-data-feed':
+      case 'mempool-threat':
         return {
-          pair: 'CSPR/USD',
-          priceUsd: (0.0345 + (Math.random() - 0.5) * 0.002).toFixed(6),
-          volume24hUsd: 1420500 + Math.floor(Math.random() * 50000),
-          liquidityDepthCspr: 8500000,
-          spreadPct: 0.08,
-          volatilityIndex30d: '14.2%',
-          trending: Math.random() > 0.4 ? 'BULLISH' : 'NEUTRAL',
+          mempoolSize: 142 + Math.floor(Math.random() * 20),
+          scanDepth: 50,
+          threatLevel: 'LOW_NO_ANOMALY',
+          checkedTransactions: 48,
+          frontrunningAlerts: 0,
+          suspiciousDeploys: [],
         };
 
-      case 'ai-inference-endpoint':
+      case 'node-security':
         return {
-          model: 'Sentinel-LLM-v3',
-          promptTokens: 412,
-          completionTokens: 128,
-          confidenceScore: 0.984,
-          sentiment: 'STRONG_POSITIVE_MOMENTUM',
-          classification: 'HEALTHY_DECENTRALIZED_PAYMENT_FLOW',
-          inferenceTimeMs: 142,
+          validatorIp: '138.201.12.85',
+          activePeers: 42,
+          intrusionAlerts: 0,
+          consensusState: 'SYNCED',
+          cpuLoadPct: '12.4%',
+          ramUsagePct: '42.8%',
+          securityState: 'SECURE',
         };
 
-      case 'storage-pin-service':
+      case 'contract-auditor':
         return {
-          cid: `QmX7z8${Math.random().toString(36).substring(2, 12)}a4B9c`,
-          bytesPinned: 2048576,
-          redundancyNodes: 12,
-          pinStatus: 'PERMANENTLY_PINNED_CSPR_DAG',
-          blockConfirmation: 1948210,
+          wasmAuditModel: 'Sentinel-Security-LLM-v2',
+          vulnerabilitiesFound: 0,
+          auditScore: '99/100',
+          reentrancyCheck: 'PASSED',
+          integerOverflowCheck: 'PASSED',
+          privilegeEscalationCheck: 'PASSED',
+          status: 'SECURE_DEPLOY_APPROVED',
         };
 
       default:
-        return { message: 'Data retrieved successfully' };
+        return { message: 'Verification completed successfully' };
     }
   }
 }
